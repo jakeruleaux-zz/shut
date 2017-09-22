@@ -9,6 +9,17 @@ class Shut extends React.Component {
     super(props);
     }
 
+  rollDice() {
+    let maxRoll = 12;
+    const diceRoll = Math.floor((Math.random() * maxRoll) + 1);
+    const { dispatch } = this.props;
+    const action = {
+      type: c.ROLL_DICE,
+      diceRoll: diceRoll
+    }
+    dispatch(action);
+  }
+
     render() {
       return (
         <div>
