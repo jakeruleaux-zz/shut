@@ -1,12 +1,12 @@
 export default (state = [], action) => {
   switch (action.type) {
     case 'ADD_NAME':
-      const { name } = action;
+      const { name, id } = action;
       return [
         ...state,
         {
-          name : name,
-          id : id
+          name: name,
+          id: id
         }
       ]
       default:

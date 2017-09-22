@@ -6,13 +6,22 @@ function PlayerList(props) {
   console.log(props.playerList);
   return (
     <div>
+          {props.playerList.map((player, index) =>
+            <Player
+              name={player.name}
+              key={player.id}
+              id={player.id}/>
 
-      <Player/>
+        )}
+
+
 
     </div>
   );
 }
 
-
+PlayerList.propTypes = {
+  playerList: PropTypes.array
+}
 
 export default PlayerList;

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import c from './../constants';
+import { v4 } from 'uuid';
 
 class NewPlayer extends React.Component {
 
@@ -15,12 +16,15 @@ class NewPlayer extends React.Component {
     event.preventDefault();
     const { _name } = this.refs;
     const { dispatch } =this.props;
-    const { action } = {
+    const action = {
       type: c.ADD_NAME,
-        name: _name.value
+      id: v4(),
+      name: _name.value
+
     }
     console.log(action);
     dispatch(action);
+    _name.value = "";
   }
 
   render() {

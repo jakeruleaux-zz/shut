@@ -5,13 +5,14 @@ function Player(props) {
   return (
     <div>
       <p>Player One: {props.name}</p>
-      <p>Player Two: {props.name}</p>
+
     </div>
   );
 }
 
 Player.propTypes ={
-  name: PropTypes.string.isRequired
+  name: PropTypes.string,
+  id: PropTypes.string
 };
 
 export default Player;

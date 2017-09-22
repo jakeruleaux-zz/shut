@@ -5,9 +5,8 @@ import { createStore} from 'redux';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import { combineReducers } from 'redux';
-import name from './reducers/new-player-reducers';
 
-const reducer = combineReducers({ name})
+import reducer from './reducers/new-player-reducers';
 
 const store = createStore(reducer);
 
