@@ -1,8 +1,9 @@
 export default (state = [], action) => {
-  console.log(action);
+
   switch (action.type) {
     case 'ROLL_DICE':
       const { rollDice } = action;
+      console.log(rollDice);
       return rollDice;
       default:
       return state;

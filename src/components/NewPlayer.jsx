@@ -23,7 +23,6 @@ class NewPlayer extends React.Component {
       name2: _name2.value
 
     }
-    console.log(action);
     dispatch(action);
     _name.value = "";
     _name2.value = "";

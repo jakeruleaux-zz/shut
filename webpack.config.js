@@ -55,7 +55,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'template.ejs',
       appMountId: 'react-app-root',
-      title: 'Tic-Tac-Toe',
+      title: 'shut-the-box',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]
