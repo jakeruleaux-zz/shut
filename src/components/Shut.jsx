@@ -3,7 +3,7 @@ import NewPlayer from './NewPlayer';
 import {connect} from 'react-redux';
 import PlayerList from "./PlayerList";
 import Cover from './Cover';
-import ReactDice from 'react-dice-complete';
+
 
 
 class Shut extends React.Component {
@@ -12,16 +12,16 @@ class Shut extends React.Component {
     super(props);
     }
 
-  rollDice() {
-    let maxRoll = 12;
-    const diceRoll = Math.floor((Math.random() * maxRoll) + 1);
+  rollDice(sides = 6) {
+    const randomRoll = Math.floor(Math.random() * sides) + 1;
     const { dispatch } = this.props;
     const action = {
       type: c.ROLL_DICE,
-      diceRoll: diceRoll
+      die1: randomRoll(),
+      die2: randomRoll()
     }
+    console.log(randomRoll);
     dispatch(action);
-    console.log(diceRoll);
   }
 
     render() {
@@ -32,24 +32,12 @@ class Shut extends React.Component {
             playerList = {this.props.masterPlayerList}/>
           <Cover
             onClick={this.rollDice}/>
-            <ReactDice
-               numDice="2"
-               rollDone={this.rollDoneCallback}
-               ref={dice => this.reactDice = dice}
-       />
+
 
         </div>
       );
     }
 
-
-rollAll() {
-  this.reactDice.rollAll()
-}
-
-rollDoneCallback(num) {
-  console.log(`You rolled a ${num}`)
-}
 
 }
 const mapStateToProps = state => {

@@ -12,11 +12,7 @@ function PlayerList(props) {
               name2={player.name2}
               key={player.id}
               id={player.id}/>
-
-        )}
-
-
-
+          )}
     </div>
   );
 }
