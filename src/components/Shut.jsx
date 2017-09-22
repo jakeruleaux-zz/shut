@@ -1,7 +1,7 @@
 import React from 'react';
 import NewPlayer from './NewPlayer';
 import {connect} from 'react-redux';
-import Player from "./Player";
+import PlayerList from "./PlayerList";
 
 class Shut extends React.Component {
 
@@ -13,9 +13,17 @@ class Shut extends React.Component {
       return (
         <div>
           <NewPlayer/>
+          <PlayerList
+            playerList = {this.props.masterPlayerList}/>
         </div>
       )
     }
 }
 
-export default Shut;
+const mapStateToProps = state => {
+  return {
+    masterPlayerList : state
+  }
+}
+
+export default connect(mapStateToProps)(Shut);

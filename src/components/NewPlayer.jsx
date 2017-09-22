@@ -19,6 +19,7 @@ class NewPlayer extends React.Component {
       type: c.ADD_NAME,
         name: _name.value
     }
+    console.log(action);
     dispatch(action);
   }
 
@@ -31,6 +32,7 @@ class NewPlayer extends React.Component {
             type="text"
             id="name"
             placeholder="Player Name"/>
+          <button type="submit">Enter</button>
         </form>
       </div>
     );
@@ -41,7 +43,5 @@ class NewPlayer extends React.Component {
 
 NewPlayer = connect()(NewPlayer);
 
-NewPlayer.propTypes = {
 
-}
 export default NewPlayer;
