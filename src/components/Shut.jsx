@@ -31,8 +31,8 @@ class Shut extends React.Component {
           <PlayerList
             playerList = {this.props.masterPlayerList}/>
           <Cover
-            onClick={this.rollDice}/>
-
+            onClick={this.props.rollDice}/>
+          
 
         </div>
       );
