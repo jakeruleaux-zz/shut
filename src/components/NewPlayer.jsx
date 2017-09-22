@@ -38,7 +38,7 @@ class NewPlayer extends React.Component {
             type="text"
             id="name"
             placeholder="Player Name"/>
-        
+
           <input
             ref="_name2"
             type="text"

@@ -6,9 +6,10 @@ import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import { combineReducers } from 'redux';
 import rollDice from './reducers/roll-dice-reducer';
-import newPlayer from './reducers/new-player-reducers';
+import reducer from './reducers/new-player-reducers';
 
-const reducer = combineReducers({newPlayer, rollDice})
+const reducers = combineReducers({rollDice})
+
 const store = createStore(reducer);
 
 ReactDOM.render(
