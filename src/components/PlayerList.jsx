@@ -9,6 +9,7 @@ function PlayerList(props) {
           {props.playerList.map((player, index) =>
             <Player
               name={player.name}
+              name2={player.name2}
               key={player.id}
               id={player.id}/>
 

@@ -14,17 +14,19 @@ class NewPlayer extends React.Component {
 
   handleNewPlayer(event) {
     event.preventDefault();
-    const { _name } = this.refs;
+    const { _name, _name2 } = this.refs;
     const { dispatch } =this.props;
     const action = {
       type: c.ADD_NAME,
       id: v4(),
-      name: _name.value
+      name: _name.value,
+      name2: _name2.value
 
     }
     console.log(action);
     dispatch(action);
     _name.value = "";
+    _name2.value = "";
   }
 
   render() {
@@ -36,6 +38,12 @@ class NewPlayer extends React.Component {
             type="text"
             id="name"
             placeholder="Player Name"/>
+        
+          <input
+            ref="_name2"
+            type="text"
+            id="name2"
+            placeholder="Player Two Name"/>
           <button type="submit">Enter</button>
         </form>
       </div>

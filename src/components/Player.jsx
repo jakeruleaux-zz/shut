@@ -5,7 +5,7 @@ function Player(props) {
   return (
     <div>
       <p>Player One: {props.name}</p>
-
+      <p>Player Two: {props.name2}</p>
     </div>
   );
 }
