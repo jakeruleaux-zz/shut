@@ -10,6 +10,7 @@ function Dice(props) {
   );
 }
 
+console.log(Dice.propTypes);
 Dice.propTypes = {
   onClick: PropTypes.func,
 

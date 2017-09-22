@@ -25,14 +25,15 @@ class Shut extends React.Component {
   }
 
     render() {
+
       return (
         <div>
           <NewPlayer/>
           <PlayerList
             playerList = {this.props.masterPlayerList}/>
           <Cover
-            onClick={this.props.rollDice}/>
-          
+            onClick={this.props.masterPlayerList.rollDice}/>
+
 
         </div>
       );

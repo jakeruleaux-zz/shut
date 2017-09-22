@@ -1,16 +1,8 @@
-export default (state = [], action) => {
-
-  const beforeRoll = {
-    die1: null,
-    die2: null
-  };
-console.log(rollDice);
+export default (state = 0, action) => {
   switch (action.type) {
-    case 'RESET_DICE':
-      return beforeRoll;
 
     case 'ROLL_DICE':
-      const { rollDice } = action;
+      const { die1, die2 } = action;
       console.log(rollDice);
       return rollDice;
       default:

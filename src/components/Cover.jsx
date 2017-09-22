@@ -9,7 +9,7 @@ class Cover extends React.Component {
   }
 
   render () {
-
+console.log(this.props.onClick);
     return (
       <div>
         <Dice

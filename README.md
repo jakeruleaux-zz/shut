@@ -1,6 +1,6 @@
 # _Shut the Box_
 
-#### English Pub Dice Game, 9/22/2017_
+#### English Pub Dice Game, 9/22/2017
 
 #### By _**Jacob Ruleax**_
 
